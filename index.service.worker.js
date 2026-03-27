@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1774618756|10497355';
+const CACHE_VERSION = '1774618992|10570025';
 /** @type {string} */
 const CACHE_PREFIX = 'SpellBook Chroni-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
