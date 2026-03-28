@@ -92,7 +92,6 @@ body {
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
-<link rel="manifest" href="index.manifest.json">
 
 	</head>
 	<body>
@@ -110,9 +109,16 @@ body {
 			<div id="status-notice"></div>
 		</div>
 
+		<script>
+// Clear old PWA caches
+if ('serviceWorker' in navigator) {
+	caches.keys().then(function(names) { for (let n of names) caches.delete(n); });
+	navigator.serviceWorker.getRegistrations().then(function(regs) { for (let r of regs) r.unregister(); });
+}
+</script>
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":61948400,"index.wasm":43682606},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":61948144,"index.wasm":43682606},"focusCanvas":true,"gdextensionLibs":[]};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
