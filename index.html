@@ -110,15 +110,11 @@ body {
 		</div>
 
 		<script>
-// Clear old PWA caches
-if ('serviceWorker' in navigator) {
-	caches.keys().then(function(names) { for (let n of names) caches.delete(n); });
-	navigator.serviceWorker.getRegistrations().then(function(regs) { for (let r of regs) r.unregister(); });
-}
+if('serviceWorker' in navigator){caches.keys().then(function(n){for(let k of n)caches.delete(k)});navigator.serviceWorker.getRegistrations().then(function(r){for(let g of r)g.unregister()})}
 </script>
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":61948144,"index.wasm":43682606},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":61948528,"index.wasm":43682606},"focusCanvas":true,"gdextensionLibs":[]};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
